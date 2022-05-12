@@ -1,0 +1,95 @@
+@import './global.css';
+
+aside {
+  grid-area: sidebar;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 25%);
+  background-color: var(--background);
+}
+
+aside .box-name {
+  padding: 20px 0;
+  background: var(--gradient-orange);
+  text-align: center;
+  text-justify: center;
+}
+
+aside .box-name h2 {
+  color: #FFFFFF;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+aside .box-brand {
+  width: 100%;
+  position: relative;
+}
+
+aside .box-brand img{
+  width: 100%;
+}
+
+aside .box-menu {
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+aside .box-menu li {
+  width: 100%;
+  border-bottom: 1px solid var(--gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+aside .box-menu li a {
+  width: 100%;
+  padding: 8px 20px;
+  background-color: transparent;
+
+  color: var(--text-info);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+
+  transition: all .2s;
+}
+
+aside .box-menu li a:hover {
+  padding-left: 30px;
+  background-color: var(--orange-secundary);
+  color: var(--orange-main);
+}
+
+aside .box-menu li a.selected {
+  background-color: var(--orange-secundary);
+  position: relative;
+}
+
+aside .box-menu li a.selected::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: var(--gradient-orange);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+aside .box-menu li a.selected:hover {
+  padding-left: 20px;
+  color: var(--text-info);
+}
+
+@media screen and (max-width: 960px) {
+  aside {
+    display: none;
+  }
+}

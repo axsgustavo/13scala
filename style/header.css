@@ -1,0 +1,124 @@
+@import './global.css';
+
+.header {
+  grid-area: header;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  background-color: var(--orange-secundary);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header .box-title {
+  color: var(--text-info);
+}
+
+.header .box-title h3 {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.header .box-title h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.header .box-title span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+
+.header .box-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .box-profile .box-language {
+  margin-right: 30px;
+}
+
+.header .box-profile .box-language button {
+  padding: 6px;
+  border-radius: 3px;
+  border: 2px solid #CCCCCC;
+  background-color: transparent;
+  cursor: not-allowed;
+
+  color: #333333;
+}
+
+.header .box-profile .box-language button .icons{
+  margin: 0 2px;
+}
+
+.header .box-profile .box-information {
+  margin-right: 8px;
+  text-align: right;
+}
+
+.header .box-profile .box-information p, header .box-profile .box-information span {
+  color: #333333;
+  font-size: 0.85rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.header .box-profile .box-information p {
+  font-size: 0.8rem;
+}
+
+.header .box-profile .box-image a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .box-profile .box-image a img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  object-fit: cover;
+} 
+
+.header .box-profile .box-image a span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: #F85959;
+
+  color: #FFFFFF;
+  font-size: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 1170px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header .box-title h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    display: none;
+  }
+}
